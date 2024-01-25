@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label4 = new Label();
             button6 = new Button();
             textBox1 = new TextBox();
@@ -76,6 +77,44 @@
             button14 = new Button();
             button15 = new Button();
             button16 = new Button();
+            panel9 = new Panel();
+            checkBox1 = new CheckBox();
+            label16 = new Label();
+            label15 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            button1 = new Button();
+            textBox10 = new TextBox();
+            textBox11 = new TextBox();
+            panel11 = new Panel();
+            button3 = new Button();
+            panel12 = new Panel();
+            pictureBox1 = new PictureBox();
+            label25 = new Label();
+            panel10 = new Panel();
+            checkBox2 = new CheckBox();
+            label19 = new Label();
+            label20 = new Label();
+            label22 = new Label();
+            button2 = new Button();
+            textBox17 = new TextBox();
+            textBox18 = new TextBox();
+            panel14 = new Panel();
+            pictureBox2 = new PictureBox();
+            label21 = new Label();
+            button10 = new Button();
+            panel13 = new Panel();
+            panel15 = new Panel();
+            button17 = new Button();
+            panel16 = new Panel();
+            pictureBox3 = new PictureBox();
+            label23 = new Label();
+            label26 = new Label();
+            panel17 = new Panel();
+            button18 = new Button();
+            panel18 = new Panel();
+            pictureBox4 = new PictureBox();
+            label24 = new Label();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -84,6 +123,20 @@
             panel6.SuspendLayout();
             panel7.SuspendLayout();
             panel8.SuspendLayout();
+            panel9.SuspendLayout();
+            panel11.SuspendLayout();
+            panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel10.SuspendLayout();
+            panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel13.SuspendLayout();
+            panel15.SuspendLayout();
+            panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel17.SuspendLayout();
+            panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -790,12 +843,526 @@
             button16.UseVisualStyleBackColor = false;
             button16.Click += button16_Click;
             // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(44, 44, 44);
+            panel9.Controls.Add(checkBox1);
+            panel9.Controls.Add(label16);
+            panel9.Controls.Add(label15);
+            panel9.Controls.Add(label18);
+            panel9.Controls.Add(label17);
+            panel9.Controls.Add(button1);
+            panel9.Controls.Add(textBox10);
+            panel9.Controls.Add(textBox11);
+            panel9.Location = new Point(0, 0);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(523, 595);
+            panel9.TabIndex = 15;
+            panel9.Paint += panel9_Paint;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AllowDrop = true;
+            checkBox1.Appearance = Appearance.Button;
+            checkBox1.BackColor = Color.FromArgb(255, 137, 17);
+            checkBox1.FlatStyle = FlatStyle.Flat;
+            checkBox1.Font = new Font("Segoe UI Black", 11.8F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox1.ForeColor = Color.White;
+            checkBox1.Location = new Point(31, 314);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(120, 48);
+            checkBox1.TabIndex = 19;
+            checkBox1.Text = "Anzeigen ";
+            checkBox1.UseVisualStyleBackColor = false;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI Black", 15.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(31, 217);
+            label16.Name = "label16";
+            label16.Size = new Size(139, 37);
+            label16.TabIndex = 18;
+            label16.Text = "Passwort";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Black", 15.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(31, 101);
+            label15.Name = "label15";
+            label15.Size = new Size(89, 37);
+            label15.TabIndex = 17;
+            label15.Text = "Email";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI Black", 10.8F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
+            label18.ForeColor = Color.White;
+            label18.Location = new Point(221, 509);
+            label18.Name = "label18";
+            label18.Size = new Size(79, 25);
+            label18.TabIndex = 16;
+            label18.Text = "Sign Up";
+            label18.Click += label18_Click;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI Black", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.ForeColor = Color.White;
+            label17.Location = new Point(199, 41);
+            label17.Name = "label17";
+            label17.Size = new Size(111, 45);
+            label17.TabIndex = 15;
+            label17.Text = "Login";
+            // 
+            // button1
+            // 
+            button1.AllowDrop = true;
+            button1.BackColor = Color.FromArgb(255, 137, 17);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 128);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(31, 427);
+            button1.Margin = new Padding(0);
+            button1.Name = "button1";
+            button1.Size = new Size(468, 45);
+            button1.TabIndex = 11;
+            button1.Text = "Submit";
+            button1.TextAlign = ContentAlignment.TopCenter;
+            button1.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // textBox10
+            // 
+            textBox10.AllowDrop = true;
+            textBox10.BackColor = Color.FromArgb(255, 137, 17);
+            textBox10.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox10.ForeColor = Color.White;
+            textBox10.Location = new Point(31, 257);
+            textBox10.Name = "textBox10";
+            textBox10.PasswordChar = '•';
+            textBox10.Size = new Size(468, 51);
+            textBox10.TabIndex = 8;
+            textBox10.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox11
+            // 
+            textBox11.AllowDrop = true;
+            textBox11.BackColor = Color.FromArgb(255, 137, 17);
+            textBox11.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox11.ForeColor = Color.White;
+            textBox11.Location = new Point(31, 141);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(468, 51);
+            textBox11.TabIndex = 4;
+            textBox11.TextAlign = HorizontalAlignment.Center;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.FromArgb(44, 44, 44);
+            panel11.Controls.Add(button3);
+            panel11.Controls.Add(panel12);
+            panel11.Location = new Point(0, 0);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(523, 595);
+            panel11.TabIndex = 20;
+            panel11.Visible = false;
+            // 
+            // button3
+            // 
+            button3.AllowDrop = true;
+            button3.BackColor = Color.FromArgb(255, 137, 17);
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 128);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.ImageAlign = ContentAlignment.TopCenter;
+            button3.Location = new Point(29, 453);
+            button3.Margin = new Padding(0);
+            button3.Name = "button3";
+            button3.Size = new Size(468, 45);
+            button3.TabIndex = 18;
+            button3.Text = "Login";
+            button3.TextAlign = ContentAlignment.TopCenter;
+            button3.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // panel12
+            // 
+            panel12.BackColor = Color.FromArgb(255, 137, 17);
+            panel12.Controls.Add(pictureBox1);
+            panel12.Controls.Add(label25);
+            panel12.Location = new Point(0, 0);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(523, 369);
+            panel12.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(182, 86);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(163, 143);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.BackColor = Color.Transparent;
+            label25.Font = new Font("Segoe UI Black", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label25.ForeColor = Color.White;
+            label25.Location = new Point(125, 299);
+            label25.Name = "label25";
+            label25.Size = new Size(277, 45);
+            label25.TabIndex = 15;
+            label25.Text = "Account erstellt";
+            // 
+            // panel10
+            // 
+            panel10.BackColor = Color.FromArgb(44, 44, 44);
+            panel10.Controls.Add(checkBox2);
+            panel10.Controls.Add(label19);
+            panel10.Controls.Add(label20);
+            panel10.Controls.Add(label22);
+            panel10.Controls.Add(button2);
+            panel10.Controls.Add(textBox17);
+            panel10.Controls.Add(textBox18);
+            panel10.Location = new Point(0, 0);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(523, 595);
+            panel10.TabIndex = 16;
+            panel10.Visible = false;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AllowDrop = true;
+            checkBox2.Appearance = Appearance.Button;
+            checkBox2.BackColor = Color.FromArgb(255, 137, 17);
+            checkBox2.FlatStyle = FlatStyle.Flat;
+            checkBox2.Font = new Font("Segoe UI Black", 11.8F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox2.ForeColor = Color.White;
+            checkBox2.Location = new Point(31, 314);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(120, 48);
+            checkBox2.TabIndex = 19;
+            checkBox2.Text = "Anzeigen ";
+            checkBox2.UseVisualStyleBackColor = false;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI Black", 15.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(31, 217);
+            label19.Name = "label19";
+            label19.Size = new Size(139, 37);
+            label19.TabIndex = 18;
+            label19.Text = "Passwort";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI Black", 15.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(31, 101);
+            label20.Name = "label20";
+            label20.Size = new Size(89, 37);
+            label20.TabIndex = 17;
+            label20.Text = "Email";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI Black", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.ForeColor = Color.White;
+            label22.Location = new Point(199, 41);
+            label22.Name = "label22";
+            label22.Size = new Size(145, 45);
+            label22.TabIndex = 15;
+            label22.Text = "Sign Up";
+            // 
+            // button2
+            // 
+            button2.AllowDrop = true;
+            button2.BackColor = Color.FromArgb(255, 137, 17);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 128);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.ImageAlign = ContentAlignment.TopCenter;
+            button2.Location = new Point(31, 427);
+            button2.Margin = new Padding(0);
+            button2.Name = "button2";
+            button2.Size = new Size(468, 45);
+            button2.TabIndex = 11;
+            button2.Text = "Submit";
+            button2.TextAlign = ContentAlignment.TopCenter;
+            button2.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // textBox17
+            // 
+            textBox17.AllowDrop = true;
+            textBox17.BackColor = Color.FromArgb(255, 137, 17);
+            textBox17.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox17.ForeColor = Color.White;
+            textBox17.Location = new Point(31, 257);
+            textBox17.Name = "textBox17";
+            textBox17.PasswordChar = '•';
+            textBox17.Size = new Size(468, 51);
+            textBox17.TabIndex = 8;
+            textBox17.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox18
+            // 
+            textBox18.AllowDrop = true;
+            textBox18.BackColor = Color.FromArgb(255, 137, 17);
+            textBox18.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox18.ForeColor = Color.White;
+            textBox18.Location = new Point(31, 141);
+            textBox18.Name = "textBox18";
+            textBox18.Size = new Size(468, 51);
+            textBox18.TabIndex = 4;
+            textBox18.TextAlign = HorizontalAlignment.Center;
+            // 
+            // panel14
+            // 
+            panel14.BackColor = Color.FromArgb(255, 137, 17);
+            panel14.Controls.Add(pictureBox2);
+            panel14.Controls.Add(label21);
+            panel14.Location = new Point(0, 0);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(523, 369);
+            panel14.TabIndex = 17;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(182, 86);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(163, 143);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 16;
+            pictureBox2.TabStop = false;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.BackColor = Color.Transparent;
+            label21.Font = new Font("Segoe UI Black", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.ForeColor = Color.White;
+            label21.Location = new Point(125, 299);
+            label21.Name = "label21";
+            label21.Size = new Size(296, 45);
+            label21.TabIndex = 15;
+            label21.Text = "Login erfolgreich";
+            // 
+            // button10
+            // 
+            button10.AllowDrop = true;
+            button10.BackColor = Color.FromArgb(255, 137, 17);
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 128);
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            button10.ForeColor = Color.White;
+            button10.ImageAlign = ContentAlignment.TopCenter;
+            button10.Location = new Point(29, 453);
+            button10.Margin = new Padding(0);
+            button10.Name = "button10";
+            button10.Size = new Size(468, 45);
+            button10.TabIndex = 18;
+            button10.Text = "fortsetzen";
+            button10.TextAlign = ContentAlignment.TopCenter;
+            button10.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.FromArgb(44, 44, 44);
+            panel13.Controls.Add(button10);
+            panel13.Controls.Add(panel14);
+            panel13.Location = new Point(0, 0);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(523, 595);
+            panel13.TabIndex = 21;
+            panel13.Visible = false;
+            // 
+            // panel15
+            // 
+            panel15.BackColor = Color.FromArgb(44, 44, 44);
+            panel15.Controls.Add(button17);
+            panel15.Controls.Add(panel16);
+            panel15.Location = new Point(0, 0);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(523, 595);
+            panel15.TabIndex = 22;
+            panel15.Visible = false;
+            // 
+            // button17
+            // 
+            button17.AllowDrop = true;
+            button17.BackColor = Color.FromArgb(255, 137, 17);
+            button17.FlatAppearance.BorderSize = 0;
+            button17.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 128);
+            button17.FlatStyle = FlatStyle.Flat;
+            button17.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            button17.ForeColor = Color.White;
+            button17.ImageAlign = ContentAlignment.TopCenter;
+            button17.Location = new Point(29, 453);
+            button17.Margin = new Padding(0);
+            button17.Name = "button17";
+            button17.Size = new Size(468, 45);
+            button17.TabIndex = 18;
+            button17.Text = "erneut versuchen";
+            button17.TextAlign = ContentAlignment.TopCenter;
+            button17.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button17.UseVisualStyleBackColor = false;
+            button17.Click += button17_Click;
+            // 
+            // panel16
+            // 
+            panel16.BackColor = Color.FromArgb(255, 137, 17);
+            panel16.Controls.Add(pictureBox3);
+            panel16.Controls.Add(label23);
+            panel16.Location = new Point(0, 0);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(523, 369);
+            panel16.TabIndex = 17;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(182, 86);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(163, 143);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 16;
+            pictureBox3.TabStop = false;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.BackColor = Color.Transparent;
+            label23.Font = new Font("Segoe UI Black", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label23.ForeColor = Color.White;
+            label23.Location = new Point(125, 299);
+            label23.Name = "label23";
+            label23.Size = new Size(262, 45);
+            label23.TabIndex = 15;
+            label23.Text = "fehlgeschlagen";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.BackColor = Color.Transparent;
+            label26.Font = new Font("Segoe UI Black", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label26.ForeColor = Color.White;
+            label26.Location = new Point(45, 377);
+            label26.Name = "label26";
+            label26.Size = new Size(438, 100);
+            label26.TabIndex = 19;
+            label26.Text = "Das Passwort muss folgende Zeichen enthalten:\r\n•Gross- und kleinbuchstaben\r\n•Zahlen\r\n•Sonderzeichen\r\n";
+            // 
+            // panel17
+            // 
+            panel17.BackColor = Color.FromArgb(44, 44, 44);
+            panel17.Controls.Add(label26);
+            panel17.Controls.Add(button18);
+            panel17.Controls.Add(panel18);
+            panel17.Location = new Point(0, 0);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(523, 595);
+            panel17.TabIndex = 23;
+            panel17.Visible = false;
+            // 
+            // button18
+            // 
+            button18.AllowDrop = true;
+            button18.BackColor = Color.FromArgb(255, 137, 17);
+            button18.FlatAppearance.BorderSize = 0;
+            button18.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 128);
+            button18.FlatStyle = FlatStyle.Flat;
+            button18.Font = new Font("Segoe UI Black", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            button18.ForeColor = Color.White;
+            button18.ImageAlign = ContentAlignment.TopCenter;
+            button18.Location = new Point(29, 501);
+            button18.Margin = new Padding(0);
+            button18.Name = "button18";
+            button18.Size = new Size(468, 45);
+            button18.TabIndex = 18;
+            button18.Text = "erneut versuchen";
+            button18.TextAlign = ContentAlignment.TopCenter;
+            button18.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button18.UseVisualStyleBackColor = false;
+            button18.Click += button18_Click;
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.FromArgb(255, 137, 17);
+            panel18.Controls.Add(pictureBox4);
+            panel18.Controls.Add(label24);
+            panel18.Location = new Point(0, 0);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(523, 369);
+            panel18.TabIndex = 17;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(182, 86);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(163, 143);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 16;
+            pictureBox4.TabStop = false;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.BackColor = Color.Transparent;
+            label24.Font = new Font("Segoe UI Black", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label24.ForeColor = Color.White;
+            label24.Location = new Point(125, 299);
+            label24.Name = "label24";
+            label24.Size = new Size(262, 45);
+            label24.TabIndex = 15;
+            label24.Text = "fehlgeschlagen";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(44, 44, 44);
-            ClientSize = new Size(523, 593);
+            ClientSize = new Size(523, 597);
+            Controls.Add(panel15);
+            Controls.Add(panel11);
+            Controls.Add(panel9);
+            Controls.Add(panel10);
+            Controls.Add(panel17);
+            Controls.Add(panel13);
             Controls.Add(panel7);
             Controls.Add(panel2);
             Controls.Add(panel5);
@@ -806,6 +1373,7 @@
             Controls.Add(button16);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel1.ResumeLayout(false);
@@ -822,6 +1390,27 @@
             panel7.PerformLayout();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel11.ResumeLayout(false);
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel13.ResumeLayout(false);
+            panel15.ResumeLayout(false);
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -874,5 +1463,43 @@
         private Button button15;
         private Button button14;
         private Button button13;
+        private Panel panel9;
+        private TextBox textBox10;
+        private TextBox textBox11;
+        private Label label17;
+        private Button button1;
+        private Label label18;
+        private CheckBox checkBox1;
+        private Label label16;
+        private Label label15;
+        private Panel panel10;
+        private CheckBox checkBox2;
+        private Label label19;
+        private Label label20;
+        private Label label22;
+        private Button button2;
+        private TextBox textBox17;
+        private TextBox textBox18;
+        private Panel panel11;
+        private Label label25;
+        private PictureBox pictureBox1;
+        private Panel panel12;
+        private Button button3;
+        private Panel panel14;
+        private PictureBox pictureBox2;
+        private Label label21;
+        private Button button10;
+        private Panel panel13;
+        private Panel panel15;
+        private Button button17;
+        private Panel panel16;
+        private PictureBox pictureBox3;
+        private Label label23;
+        private Panel panel17;
+        private Button button18;
+        private Panel panel18;
+        private PictureBox pictureBox4;
+        private Label label24;
+        private Label label26;
     }
 }
