@@ -1,39 +1,46 @@
 using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms.Design;
+using System.IO;
+using System.Text;
+using System.Security.Cryptography.X509Certificates;
+using System.Drawing.Text;
 
 namespace Notes
 {
     public partial class Form1 : Form
     {
+        public string Dateipfadlogin = Path.Combine(@"..\data\login.csv");
+
         public Form1()
         {
             InitializeComponent();
 
 
         }
+
         string Email = string.Empty;
         string Passwort = string.Empty;
         private void button13_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
+            PanelIT.Visible = true;
             panel4.Visible = true;
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            panel5.Visible = true;
+            PanelABU.Visible = true;
             panel6.Visible = true;
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true;
+            PanelEG.Visible = true;
             panel3.Visible = true;
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            panel7.Visible = true;
+            PanelRechner.Visible = true;
             panel8.Visible = true;
         }
 
@@ -41,7 +48,7 @@ namespace Notes
 
         private void button6_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            PanelIT.Visible = false;
             panel4.Visible = false;
         }
 
@@ -49,7 +56,7 @@ namespace Notes
 
         private void button9_Click(object sender, EventArgs e)
         {
-            panel5.Visible = false;
+            PanelABU.Visible = false;
             panel6.Visible = false;
         }
 
@@ -57,14 +64,14 @@ namespace Notes
 
         private void button5_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
+            PanelEG.Visible = false;
             panel3.Visible = false;
         }
 
 
         private void button12_Click(object sender, EventArgs e)
         {
-            panel7.Visible = false;
+            PanelRechner.Visible = false;
             panel8.Visible = false;
         }
 
@@ -77,10 +84,10 @@ namespace Notes
         {
 
             int counter = 4;
-            string Note1 = textBox1.Text;
-            string Note2 = textBox5.Text;
-            string Note3 = textBox4.Text;
-            string Note4 = textBox3.Text;
+            string Note1 = IT01.Text;
+            string Note2 = IT02.Text;
+            string Note3 = IT03.Text;
+            string Note4 = IT04.Text;
 
             double Note1double = Convert.ToDouble(Note1);
             double Note2double = Convert.ToDouble(Note2);
@@ -92,25 +99,25 @@ namespace Notes
             if (Note1double <= 0 || Note1double > 6)
             {
                 Note1double = 0;
-                textBox1.Text = "0";
+                IT01.Text = "0";
                 counter--;
             }
             if (Note2double <= 0 || Note2double > 6)
             {
                 Note2double = 0;
-                textBox5.Text = "0";
+                IT02.Text = "0";
                 counter--;
             }
             if (Note3double <= 0 || Note3double > 6)
             {
                 Note3double = 0;
-                textBox4.Text = "0";
+                IT03.Text = "0";
                 counter--;
             }
             if (Note4double <= 0 || Note4double > 6)
             {
                 Note4double = 0;
-                textBox3.Text = "0";
+                IT04.Text = "0";
                 counter--;
             }
 
@@ -121,7 +128,7 @@ namespace Notes
 
             string durchschnittstring = Convert.ToString(Math.Round(durchschnitt, 2));
 
-            label3.Text = durchschnittstring;
+            DurchschnittIT.Text = durchschnittstring;
 
 
         }
@@ -130,10 +137,10 @@ namespace Notes
         {
 
             int counter = 4;
-            string Note1 = textBox16.Text;
-            string Note2 = textBox13.Text;
-            string Note3 = textBox14.Text;
-            string Note4 = textBox15.Text;
+            string Note1 = ABU01.Text;
+            string Note2 = ABU02.Text;
+            string Note3 = ABU03.Text;
+            string Note4 = ABU04.Text;
 
             double Note1double = Convert.ToDouble(Note1);
             double Note2double = Convert.ToDouble(Note2);
@@ -145,25 +152,25 @@ namespace Notes
             if (Note1double <= 0 || Note1double > 6)
             {
                 Note1double = 0;
-                textBox16.Text = "0";
+                ABU01.Text = "0";
                 counter--;
             }
             if (Note2double <= 0 || Note2double > 6)
             {
                 Note2double = 0;
-                textBox13.Text = "0";
+                ABU02.Text = "0";
                 counter--;
             }
             if (Note3double <= 0 || Note3double > 6)
             {
                 Note3double = 0;
-                textBox14.Text = "0";
+                ABU03.Text = "0";
                 counter--;
             }
             if (Note4double <= 0 || Note4double > 6)
             {
                 Note4double = 0;
-                textBox15.Text = "0";
+                ABU04.Text = "0";
                 counter--;
             }
 
@@ -174,7 +181,7 @@ namespace Notes
             string durchschnittstring = Convert.ToString(Math.Round(durchschnitt, 2));
 
 
-            label7.Text = durchschnittstring;
+            DurchschnittABU.Text = durchschnittstring;
 
 
         }
@@ -182,10 +189,10 @@ namespace Notes
         private void button4_Click(object sender, EventArgs e)
         {
             int counter = 4;
-            string Note1 = textBox8.Text;
-            string Note2 = textBox2.Text;
-            string Note3 = textBox6.Text;
-            string Note4 = textBox7.Text;
+            string Note1 = EG01.Text;
+            string Note2 = EG02.Text;
+            string Note3 = EG03.Text;
+            string Note4 = EG04.Text;
 
             double Note1double = Convert.ToDouble(Note1);
             double Note2double = Convert.ToDouble(Note2);
@@ -197,25 +204,25 @@ namespace Notes
             if (Note1double <= 0 || Note1double > 6)
             {
                 Note1double = 0;
-                textBox8.Text = "0";
+                EG01.Text = "0";
                 counter--;
             }
             if (Note2double <= 0 || Note2double > 6)
             {
                 Note2double = 0;
-                textBox2.Text = "0";
+                EG02.Text = "0";
                 counter--;
             }
             if (Note3double <= 0 || Note3double > 6)
             {
                 Note3double = 0;
-                textBox6.Text = "0";
+                EG03.Text = "0";
                 counter--;
             }
             if (Note4double <= 0 || Note4double > 6)
             {
                 Note4double = 0;
-                textBox7.Text = "0";
+                EG04.Text = "0";
                 counter--;
             }
 
@@ -226,7 +233,7 @@ namespace Notes
             string durchschnittstring = Convert.ToString(Math.Round(durchschnitt, 2));
 
 
-            label2.Text = durchschnittstring;
+            DurchschnittEG.Text = durchschnittstring;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -259,24 +266,61 @@ namespace Notes
 
         private void button1_Click(object sender, EventArgs e)
         {
+            List<string> listelogins = new List<string>();
+            string[] logins = File.ReadAllLines(Dateipfadlogin);
 
-            if (textBox11.Text == Email && Email != string.Empty && Passwort != string.Empty && textBox10.Text == Passwort)
+            string loginmail = textBox11.Text;
+            string loginpasswort = textBox10.Text;
+            string logintotal = loginmail + loginpasswort;
+            bool logincheck = false;
+
+            foreach (string login in logins)
             {
 
-                panel13.Visible = true;
-                panel9.Visible = false;
 
+
+                if (logintotal == login && logintotal != string.Empty)
+                {
+                    string[] data = File.ReadAllLines($@"..\data\users\{logintotal}.csv");
+                    logincheck = true;
+
+                    IT01.Text = data[0];
+                    IT02.Text = data[1];
+                    IT03.Text = data[2];
+                    IT04.Text = data[3];
+                    DurchschnittIT.Text = data[4];
+                    ABU01.Text = data[5];
+                    ABU02.Text = data[6];
+                    ABU03.Text = data[7];
+                    ABU04.Text = data[8];
+                    DurchschnittABU.Text = data[9];
+                    EG01.Text = data[10];
+                    EG02.Text = data[11];
+                    EG03.Text = data[12];
+                    EG04.Text = data[13];
+                    DurchschnittEG.Text = data[14];
+
+
+
+                }
+            }
+
+
+
+            if (logincheck == true)
+            {
+                Panelloginerfolgreich.Visible = true;
+                PanelLogin.Visible = false;
             }
 
             else
             {
                 textBox11.Text = string.Empty;
                 textBox10.Text = string.Empty;
-                panel15.Visible = true;
-                panel13.Visible = false;
+                Panelloginfehlgeschlagen.Visible = true;
+                Panelloginerfolgreich.Visible = false;
 
             }
-
 
 
         }
@@ -293,7 +337,7 @@ namespace Notes
                 bool lower = false;
                 bool Sonderzeichen = false;
 
-                if (Passwort.Length >= 12)
+                if (Passwort.Length >= 8)
                 {
                     foreach (char i in Passwort)
                     {
@@ -337,26 +381,36 @@ namespace Notes
 
                     if (Digit == true && Upper == true && lower == true && Sonderzeichen == true && Email.Contains("@") && Email.Contains("."))
                     {
-                        panel11.Visible = true;
-                        panel10.Visible = false;
+                        PanelAccounterstellt.Visible = true;
+                        PanelSignUp.Visible = false;
                         textBox18.Text = string.Empty;
                         textBox17.Text = string.Empty;
+
+                        File.AppendAllText(Dateipfadlogin, "\n" + Email + Passwort);
+
+                        string userpath = Path.Combine(@$"..\data\users\{Email + Passwort}.csv");
+
+                        string[] userdata =
+                        {"0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"};
+                        WriteToCsv(userpath, userdata);
+
+
                     }
 
                     else
                     {
                         textBox18.Text = string.Empty;
                         textBox17.Text = string.Empty;
-                        panel17.Visible = true;
-                        panel10.Visible = false;
+                        Panelfehlgeschlagenpasswort.Visible = true;
+                        PanelSignUp.Visible = false;
                     }
                 }
                 else
                 {
                     textBox18.Text = string.Empty;
                     textBox17.Text = string.Empty;
-                    panel17.Visible = true;
-                    panel10.Visible = false;
+                    Panelfehlgeschlagenpasswort.Visible = true;
+                    PanelSignUp.Visible = false;
                 }
 
 
@@ -366,41 +420,104 @@ namespace Notes
             {
                 textBox18.Text = string.Empty;
                 textBox17.Text = string.Empty;
-                panel17.Visible = true;
-                panel10.Visible = false;
+                Panelfehlgeschlagenpasswort.Visible = true;
+                PanelSignUp.Visible = false;
 
             }
 
         }
 
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            string mail = textBox11.Text;
+            string passwort = textBox10.Text;
+
+            string userpath = Path.Combine(@$"..\data\users\{mail + passwort}.csv");
+
+            string[] userdata =
+            {
+                IT01.Text,
+                IT02.Text,
+                IT03.Text,
+                IT04.Text,
+                DurchschnittIT.Text,
+                ABU01.Text,
+                ABU02.Text,
+                ABU03.Text,
+                ABU04.Text,
+                DurchschnittABU.Text,
+                EG01.Text,
+                EG02.Text,
+                EG03.Text,
+                EG04.Text,
+                DurchschnittEG.Text
+
+            };
+
+
+
+            WriteToCsv(userpath, userdata);
+
+
+
+
+        }
+        static void WriteToCsv(string userpath, string[] userdata)
+        {
+            if (!File.Exists(userpath))
+            {
+
+                using (StreamWriter createFile = File.CreateText(userpath))
+                {
+
+                    foreach (string note in userdata)
+                    {
+                        createFile.WriteLine(note);
+                    }
+                }
+            }
+            else
+
+            {
+                using (StreamWriter writer = new StreamWriter(userpath))
+                {
+
+                    foreach (string note in userdata)
+                    {
+                        writer.WriteLine(note);
+                    }
+                }
+            }
+        }
+
         private void label18_Click(object sender, EventArgs e)
         {
-            panel9.Visible = false;
-            panel10.Visible = true;
+            PanelLogin.Visible = false;
+            PanelSignUp.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            panel11.Visible = false;
-            panel9.Visible = true;
+            PanelAccounterstellt.Visible = false;
+            PanelLogin.Visible = true;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            panel13.Visible = false;
+            Panelloginerfolgreich.Visible = false;
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
 
-            panel9.Visible = true;
-            panel15.Visible = false;
+            PanelLogin.Visible = true;
+            Panelloginfehlgeschlagen.Visible = false;
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
-            panel10.Visible = true;
-            panel17.Visible = false;
+            PanelSignUp.Visible = true;
+            Panelfehlgeschlagenpasswort.Visible = false;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -435,6 +552,18 @@ namespace Notes
 
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
